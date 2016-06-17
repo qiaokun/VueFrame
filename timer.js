@@ -1,7 +1,4 @@
-$(function() {
-    displayTime();
-});
-function displayTime() {
+function displayTime(systime) {
     var today = new Date();
     var years = today.getFullYear();
     var months = today.getMonth() + 1;
@@ -14,7 +11,7 @@ function displayTime() {
     minutes = fixTime(minutes);
     seconds = fixTime(seconds);
     var t = years + "年" + months + "月" + dateDay + "日 " + weekday + " " + hours + ":" + minutes + ":" + seconds;
-    $("#systime").html(t);
+    systime.html(t);
     setTimeout('displayTime();', 500);
 }
 function fixTime(t) {
