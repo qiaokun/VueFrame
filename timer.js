@@ -1,4 +1,6 @@
-function displayTime(systime) {
+var timer = {};
+
+timer.displayTime = function (systime) {
     var today = new Date();
     var years = today.getFullYear();
     var months = today.getMonth() + 1;
@@ -13,14 +15,16 @@ function displayTime(systime) {
     var t = years + "年" + months + "月" + dateDay + "日 " + weekday + " " + hours + ":" + minutes + ":" + seconds;
     systime.html(t);
     setTimeout('displayTime(systime);', 500);
-}
-function fixTime(t) {
+};
+
+timer.fixTime = function (t) {
     if (t < 10) {
         t = "0" + t;
     }
     return t;
-}
-function formatWeekday(w) {
+};
+
+timer.formatWeekday = function (w) {
     var r;
     switch (w) {
         case 0:
@@ -49,4 +53,6 @@ function formatWeekday(w) {
             break;
     }
     return r;
-}
+};
+
+module.exports = util;
