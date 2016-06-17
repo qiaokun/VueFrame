@@ -5,13 +5,13 @@ timer.displayTime = function (systime) {
     var years = today.getFullYear();
     var months = today.getMonth() + 1;
     var day = today.getDay();
-    var weekday = formatWeekday(day);
+    var weekday = timer.formatWeekday(day);
     var dateDay = today.getDate();
     var hours = today.getHours();
     var minutes = today.getMinutes();
     var seconds = today.getSeconds();
-    minutes = fixTime(minutes);
-    seconds = fixTime(seconds);
+    minutes = timer.fixTime(minutes);
+    seconds = timer.fixTime(seconds);
     var t = years + "年" + months + "月" + dateDay + "日 " + weekday + " " + hours + ":" + minutes + ":" + seconds;
     systime.html(t);
     setTimeout('displayTime(systime);', 500);
