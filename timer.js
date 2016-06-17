@@ -12,7 +12,7 @@ function displayTime(systime) {
     seconds = fixTime(seconds);
     var t = years + "年" + months + "月" + dateDay + "日 " + weekday + " " + hours + ":" + minutes + ":" + seconds;
     systime.html(t);
-    setTimeout('displayTime();', 500);
+    setTimeout('displayTime(systime);', 500);
 }
 function fixTime(t) {
     if (t < 10) {
