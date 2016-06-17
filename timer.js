@@ -14,7 +14,7 @@ timer.displayTime = function (systime) {
     seconds = timer.fixTime(seconds);
     var t = years + "年" + months + "月" + dateDay + "日 " + weekday + " " + hours + ":" + minutes + ":" + seconds;
     systime.html(t);
-//    setTimeout('timer.displayTime(systime);', 500);
+    setTimeout(this.displayTime(systime), 500);
 };
 
 timer.fixTime = function (t) {
