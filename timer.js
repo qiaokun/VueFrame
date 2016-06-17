@@ -55,4 +55,4 @@ timer.formatWeekday = function (w) {
     return r;
 };
 
-module.exports = util;
+module.exports = timer;
